@@ -1,12 +1,12 @@
 'use strict';
 
-module.exports = {}
+let list = module.exports = {};
 
-function (linkedList, n) {
+list.original = function (n, linkedList) {
   if (typeof n !== 'number' || n < 0) return null;
   let length = 0;
   let currentNode = linkedList;
-  while (currentNode) {
+  while (currentNode.next) {
     length++;
     currentNode = currentNode.next;
   }
@@ -22,45 +22,10 @@ function (linkedList, n) {
 
 
 
-
-function (linkedList, n) {
+list.nthFromEnd = function (n, list) {
   if (typeof n !== 'number' || n < 0) return null;
-  for (
-    let length = 0, currentNode = linkedList;
-    currentNode;
-    length++, currentNode = currentNode.next;
-  )
-  if (length < n) return null;
-  for (
-    let distance = length - n, currentNode = currentNode.next;
-    distance > 0;
-    distance--, currentNode = currentNode.next;
-  )
-  return currentNode;
-}
-
-
-
-
-
-
-let nthFromEnd = function (list, n) {
-  if (typeof n !== 'number' || n < 0) return null; // O(2)
-  for (var scout = list; n > 0; n--, scout = scout.next); // O(n)
-  if (length < n) return null; // O(1)
-  for (var target = list, scout = list; scout.next; target = target.next, scout = scout.next); // O(n)
-  return target;
-}
-
-
-
-
-
-
-let nthFromEnd = function (list, n) {
-  if (typeof n !== 'number' || n < 0) return null;
-  for (var scout = target = list, i = 0; scout; i++, scout = scout.next) {
-    if (i >= n) target = target.next;
+  for (var scout = list, target = list, i = 0; scout; i++, scout = scout.next) {
+    if (i > n) target = target.next;
   }
   return i < n ? null : target;
 }
