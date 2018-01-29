@@ -1,0 +1,16 @@
+{
+  "name": "challenge-11",
+  "version": "1.0.0",
+  "description": "Write a function checkBraces() to examine whether the pairs and the orders of { and } are correct in a string, using a Stack.",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "",
+  "license": "ISC"
+}
