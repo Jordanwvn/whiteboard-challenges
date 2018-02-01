@@ -11,8 +11,7 @@ const dedupe = module.exports = function (list) { // O(n), iterates once
 
   for (let current = list; current; current = current.next) {
     if (!stack.top || current.value !== stack.top.value ) {
-      stack.push(current.value);
-      result.insertEnd(current.value);
+      result.insertEnd(stack.push(current.value));
     }
   }
   return result;

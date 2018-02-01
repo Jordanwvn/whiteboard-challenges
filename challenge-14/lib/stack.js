@@ -11,7 +11,7 @@ module.exports = class {
 
     node.next = this.top;
     this.top = node;
-    return this.top;
+    return this.top.value;
   }
 
   pop() {
