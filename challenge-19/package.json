@@ -1,0 +1,19 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "main": "queue.js",
+  "dependencies": {
+    "eslint": "^4.17.0",
+    "jest": "^22.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib"
+  },
+  "description": "Write a function which will return the max child count of a node within a k-ary tree"
+}
